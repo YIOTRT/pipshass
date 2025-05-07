@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Domicilio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="text-align: center; color: #ff5722;">Agregar Domicilio</h1>
+    <form id="domicilioForm">
+        <label for="calle">Calle:</label>
+        <input type="text" id="calle" placeholder="Ingresa tu calle" required>
+
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" placeholder="Número exterior" required>
+
+        <label for="colonia">Colonia:</label>
+        <input type="text" id="colonia" placeholder="Ingresa tu colonia" required>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" placeholder="Ingresa tu ciudad" required>
+
+        <button type="button" id="guardarDomicilio" style="margin-top: 20px; padding: 10px; background-color: #ff5722; color: #fff; border: none; border-radius: 5px;">Guardar Domicilio</button>
+    </form>
+
+    <script src="domicilio.js"></script>
+</body>
+</html>

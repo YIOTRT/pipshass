@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pedido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="text-align: center; color: #ff5722;">Formulario de Pedido</h1>
+    <form id="pedidoForm">
+        <h3>Agrega los tipos de pizza y las cantidades que deseas:</h3>
+        <div id="pizzasContainer">
+            
+            <table id="tablaPizzas" style="width: 100%; margin-bottom: 20px;">
+                <thead>
+                    <tr>
+                        <th>Tipo de Pizza</th>
+                        <th>Cantidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <select id="pizza" required>
+                    <option value="Margarita" data-precio="150">Margarita - $150 MXN</option>
+                    <option value="Pepperoni" data-precio="180">Pepperoni - $180 MXN</option>
+                    <option value="Mexicana" data-precio="190">Mexicana - $190 MXN</option>
+                </select>
+                <input type="number" id="cantidadPizza" min="1" value="1" required placeholder="Cantidad">
+                <button type="button" id="agregarPizza" style="background-color: #ff5722; color: white; padding: 10px; border: none; border-radius: 5px;">Agregar Pizza</button>
+            </div>
+        </div>
+
+        <h3>Selecciona el tipo de pedido:</h3>
+        <div id="tipoPedido">
+            <label>
+                <input type="radio" name="pedidoTipo" value="Domicilio" id="servicioDomicilio" required> Servicio a Domicilio
+            </label>
+            <label>
+                <input type="radio" name="pedidoTipo" value="Local" id="pedidoLocal"> Pedido Local
+            </label>
+        </div>
+
+        <div id="domicilioSeccion" style="display: none;">
+            <h3>¿Ya agregaste tu domicilio?</h3>
+            <button type="button" id="agregarDomicilio" style="background-color: #ff5722; color: white; padding: 10px; border: none; border-radius: 5px;">Agregar Domicilio</button>
+        </div>
+
+        <h3>Selecciona tu método de pago</h3>
+        <label for="pago">Forma de pago:</label>
+        <select id="pago" required>
+            <option value="Efectivo">Efectivo</option>
+            <option value="Tarjeta">Tarjeta</option>
+        </select>
+
+        <div id="datosTarjeta" style="display: none; margin-top: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+            <h4>Información de la Tarjeta</h4>
+            <label for="tarjeta">Número de Tarjeta:</label>
+            <input type="text" id="tarjeta" placeholder="XXXX-XXXX-XXXX-XXXX">
+
+            <label for="fecha">Fecha de Expiración:</label>
+            <input type="text" id="fecha" placeholder="MM/AA">
+
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" placeholder="123">
+        </div>
+
+        <button type="submit" style="margin-top: 20px; padding: 10px; background-color: #ff5722; color: #fff; border: none; border-radius: 5px;">Confirmar Pedido</button>
+    </form>
+
+    <div id="ticket" class="ticket" style="display: none; margin-top: 20px;">
+        <h2>Ticket de Compra</h2>
+        <p id="detallePizzas"></p>
+        <p id="detallePago"></p>
+        <p id="detalleDireccion"></p>
+        <p id="detalleTotal"></p>
+        <button id="seguirPedido" style="margin-top: 10px; padding: 10px; background-color: #ff5722; color: #fff; border: none; border-radius: 5px;">Seguir Pedido</button>
+    </div>
+
+    <script src="formulario.js" type="module"></script>
+    <script src="domicilio.js" type="module"></script>
+  
+</body>
+</html>

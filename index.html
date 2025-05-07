@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Pipshas!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header style="text-align: center; margin-bottom: 20px;">
+        <img src="logo-pizzeria.png" alt="Logo de La Gran Pizza" style="width: 150px; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);">
+        <h1 style="color: #ff5722;">Bienvenido a las Pipshas!</h1>
+        <p style="font-size: 18px;">¡El lugar donde el amor comienza con una rebanada!</p>
+    </header>
+
+    <section id="menuDia" style="padding: 20px; background-color: #ffe6cc; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 20px;">
+        <h2 style="color: #e64a19;">Menú del Día</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin: 10px 0; font-size: 18px;">
+                <strong>Margarita:</strong> Una deliciosa combinación de queso y albahaca fresca. <span style="color: green;">$150 MXN</span>
+            </li>
+            <li style="margin: 10px 0; font-size: 18px;">
+                <strong>Pepperoni:</strong> La clásica y favorita, con pepperoni y extra queso. <span style="color: green;">$180 MXN</span>
+            </li>
+            <li style="margin: 10px 0; font-size: 18px;">
+                <strong>Mexicana:</strong> Picante y única, con jalapeños y chorizo. <span style="color: green;">$190 MXN</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="reseñas" style="padding: 20px; margin: 20px;">
+        <h2 style="color: #e64a19;">Lo que dicen nuestros clientes</h2>
+        <blockquote style="font-style: italic; color: #333;">"¡La mejor pizza que he probado en la vida! No puedo esperar para volver." - Carla M.</blockquote>
+        <blockquote style="font-style: italic; color: #333;">"El sabor y calidad son insuperables. ¡Es amor a primera mordida!" - Juan P.</blockquote>
+    </section>
+
+    <button onclick="abrirFormulario()" style="margin-top: 30px; padding: 10px 20px; background-color: #ff5722; color: #fff; font-size: 18px; border: none; border-radius: 5px; cursor: pointer;">¡Haz tu Pedido Ahora!</button>
+
+    <script>
+        function abrirFormulario() {
+            window.location.href = "formulario.html"; // Redirige a formulario.html en la misma pestaña
+        }
+    </script>
+</body>
+</html>
